@@ -23,28 +23,6 @@ The system is built on a Directed Acyclic Graph (DAG) architecture containing sp
    - **Decide Images:** An LLM reviews the full text to intelligently identify where visual aids (diagrams, tables, images) are needed and generates precise image prompts.
    - **Generate & Place:** Calls the Gemini API to create the images, saves them locally, and embeds the file paths directly into the final Markdown.
 
-## 🚀 Setup & Installation
-
-**1. Clone the repository**
-\`\`\`bash
-git clone https://github.com/yourusername/agentic-blog-writer.git
-cd agentic-blog-writer
-\`\`\`
-
-**2. Create a virtual environment and install dependencies**
-\`\`\`bash
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
-pip install -r requirements.txt
-\`\`\`
-
-**3. Configure Environment Variables**
-Create a `.env` file in the root directory and add your API keys:
-\`\`\`env
-OPENAI_API_KEY=your_openai_api_key
-TAVILY_API_KEY=your_tavily_api_key
-GEMINI_API_KEY=your_google_gemini_api_key
-\`\`\`
 
 ## ✨ Future Enhancements
 * **Human-in-the-loop (HITL):** Adding a pause state after the Orchestrator node to allow user approval or modification of the blog plan before the workers start writing.
